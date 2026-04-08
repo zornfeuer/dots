@@ -6,7 +6,7 @@ local map = function(mode, lhs, rhs, desc)
 end
 
 -- Neo-tree
-map("n", "<leader>e", ":Oil<CR>", "Open Oil explorer")
+map("n", "<leader>e", ":Oil --float<CR>", "Open Oil explorer")
 
 -- Picker
 map("n", "<leader>ff", function() require("fzf-lua").files() end, "Find files")
