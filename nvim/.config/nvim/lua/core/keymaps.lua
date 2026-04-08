@@ -2,12 +2,11 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 local map = function(mode, lhs, rhs, desc)
-  vim.keymap.set(mode, lhs, rhs, { silent = true, desc = desc })
+    vim.keymap.set(mode, lhs, rhs, { silent = true, desc = desc })
 end
 
 -- Neo-tree
-map("n", "<leader>e", ":Neotree left focus<CR>", "Neotree: left focus")
-map("n", "<leader>g", ":Neotree float git_status<cr>", "Neotree: git status")
+map("n", "<leader>e", ":Oil<CR>", "Open Oil explorer")
 
 -- Picker
 map("n", "<leader>ff", function() require("fzf-lua").files() end, "Find files")

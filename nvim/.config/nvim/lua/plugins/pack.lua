@@ -61,18 +61,13 @@ local PLUGINS = {
         init = require("plugins.cmp").init,
         opts = require("plugins.cmp").opts,
     },
-    --- === Neo-tree ===
-    { src = "https://github.com/nvim-lua/plenary.nvim" },
-    { src = "https://github.com/MunifTanjim/nui.nvim" },
+    --- === Explorer ===
     {
-        src = "https://github.com/nvim-neo-tree/neo-tree.nvim",
-        version = "v3.x",
+        src = "https://github.com/stevearc/oil.nvim",
         dependencies = {
-            "https://github.com/nvim-lua/plenary.nvim",
-            "https://github.com/MunifTanjim/nui.nvim",
             "https://github.com/nvim-tree/nvim-web-devicons",
         },
-        config = require("plugins.neotree").config,
+        config = require("plugins.oil").config,
     },
     --- === Other ===
     { src = "https://github.com/pearofducks/ansible-vim" },
