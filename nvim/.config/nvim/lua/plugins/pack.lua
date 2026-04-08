@@ -25,9 +25,9 @@ local PLUGINS = {
         config = require("plugins.lsp").setup_lsp,
     },
     --- === Mini Plugins ===
-    { src = "https://github.com/echasnovski/mini.comment" },
-    { src = "https://github.com/echasnovski/mini.pairs" },
-    { src = "https://github.com/echasnovski/mini.notify" },
+    { name = "mini.comment",                                       src = "https://github.com/echasnovski/mini.comment" },
+    { name = "mini.pairs",                                         src = "https://github.com/echasnovski/mini.pairs" },
+    { name = "mini.notify",                                        src = "https://github.com/echasnovski/mini.notify" },
     --- === Neovim Treesitter ===
     {
         src = "https://github.com/nvim-treesitter/nvim-treesitter",
@@ -122,7 +122,7 @@ function M.init()
             if not data or data.spec.name ~= "blink.cmp" then
                 return
             end
-            if data.kind ~= "update" then
+            if data.kind ~= "update" and data.kind ~= "install" then
                 return
             end
             run_cargo_blink(data.path)

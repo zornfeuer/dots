@@ -7,7 +7,10 @@ M.opts = {
         c = { 'clang-format' },
         cpp = { 'clang-format' },
     },
-    format_after_save = true,
+      format_on_save = {
+        lsp_format = "fallback",
+        timeout_ms = 500,
+      },
 }
 
 return M
