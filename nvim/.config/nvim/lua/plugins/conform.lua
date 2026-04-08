@@ -1,21 +1,13 @@
-return {
-  "stevearc/conform.nvim",
-  event = { "BufWritePre" },
-  cmd = { "ConformInfo" },
-  opts = {
+local M = {}
+
+M.opts = {
     formatters_by_ft = {
-      julia = { "runic", lsp_format = "fallback", stop_after_first = true },
-      python = { 'autopep8', 'black' },
-      rust = { 'rustfmt' },
-      javascript = { 'biome', 'prettier', stop_after_first = true },
-      javascriptreact = { 'biome', 'prettier', stop_after_first = true },
-      typescript = { 'biome', 'prettier', stop_after_first = true },
-      typescriptreact = { 'biome', 'prettier', stop_after_first = true },
+        python = { 'ruff', 'black' },
+        rust = { 'rustfmt' },
+        c = { 'clang-format' },
+        cpp = { 'clang-format' },
     },
-    format_on_save = {
-      lsp_format = 'fallback',
-      -- Default 500ms is too short for slow LSP formatters (e.g. julials / JuliaFormatter path).
-      timeout_ms = 15000,
-    },
-  },
+    format_after_save = true,
 }
+
+return M
