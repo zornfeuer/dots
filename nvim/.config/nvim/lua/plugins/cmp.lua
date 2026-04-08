@@ -29,8 +29,14 @@ M.opts = {
         ["<CR>"] = { "accept", "fallback" },
     },
     completion = {
+        menu = {
+            border = "rounded",
+        },
         documentation = {
             auto_show = true,
+            window = {
+                border = "rounded",
+            },
         },
     },
     appearance = {

@@ -81,7 +81,9 @@ M.setup_mason = function(_, opts)
         vim.env.PATH = local_bin .. ":" .. (vim.env.PATH or "")
     end
 
-    require("mason").setup(opts)
+    require("mason").setup(vim.tbl_deep_extend("force", opts or {}, {
+        ui = { border = "rounded" },
+    }))
 end
 
 return M
