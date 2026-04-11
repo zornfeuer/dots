@@ -109,7 +109,3 @@ copilot-gost-logs:
 
 copilot-gost-logs-recent:
     journalctl --user -u copilot-gost.service -n 80 --no-pager
-
-# Runic.jl formatter for Julia (conform.nvim `runic`); uses shared env @runic on XDG depot
-install-julia-runic:
-    bash -c 'command -v julia >/dev/null || { echo "julia not found"; exit 1; }; julia --project=@runic --startup-file=no --history-file=no -e "using Pkg; Pkg.add(\"Runic\")"; echo "Done. Ensure base is stowed so ~/.local/bin/runic is available."'

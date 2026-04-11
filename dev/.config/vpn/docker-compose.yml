@@ -3,7 +3,7 @@ services:
   sing-box:
     image: ghcr.io/sagernet/sing-box:latest
     ports:
-      - "2027:2026"
+      - "2026:2026"
       - "443:443"
     container_name: sing-box
     restart: always
