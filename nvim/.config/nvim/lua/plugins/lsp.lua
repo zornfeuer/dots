@@ -10,7 +10,7 @@ local servers = {
     "marksman",
     "nil_ls",
     "prismals",
-    "pylsp",
+    "ruff",
     "rust_analyzer",
     "ts_ls",
 }
@@ -80,7 +80,6 @@ M.setup_mason = function(_, opts)
     if not vim.startswith(vim.env.PATH or "", local_bin) then
         vim.env.PATH = local_bin .. ":" .. (vim.env.PATH or "")
     end
-
     require("mason").setup(vim.tbl_deep_extend("force", opts or {}, {
         ui = { border = "rounded" },
     }))
