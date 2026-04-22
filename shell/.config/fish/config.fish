@@ -12,21 +12,15 @@ status is-interactive; and begin
     alias cbr 'cargo build --release'
     alias ct 'cargo test'
     alias ca 'cargo add'
+    alias cl 'cargo llvm-cov --all-features --workspace --html'
     alias ni 'bun install'
     alias nr 'bun run'
     alias nx 'bunx'
-    source ~/.config/fish/functions/*
-
-    if test -f ~/.config/fish/secrets.fish
-      source ~/.config/fish/secrets.fish
-    end
 
     set -x XDG_DATA_HOME "$HOME/.local/share"
     set -x XDG_CONFIG_HOME "$HOME/.config"
     set -x XDG_CACHE_HOME "$HOME/.cache"
     set -x XDG_STATE_HOME "$HOME/.local/state"
-
-    source ~/.config/fish/conf.d/setup_env.fish
 
     function fish_prompt
         set -l last_status $status

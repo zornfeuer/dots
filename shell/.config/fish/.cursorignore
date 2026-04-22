@@ -1,2 +1,3 @@
 functions/vpn.fish
-secrets.fish
+functions/mvpn.fish
+conf.d/secrets.fish

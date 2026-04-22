@@ -1,0 +1,17 @@
+### disk free space
+df -h
+
+### memory top
+ps aux --sort=-%mem | head
+
+### cpu top
+ps aux --sort=-%cpu | head
+
+### docker ps
+sudo docker ps
+
+### docker logs
+sudo docker logs <container_id> --tail 200
+
+### list ports
+ss -tulpn
