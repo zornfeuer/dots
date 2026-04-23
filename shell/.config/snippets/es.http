@@ -1,11 +1,11 @@
 ### indices
-GET _cat/indices?v&s=index
+_cat/indices?v&s=index
 
 ### health
-GET _cluster/health
+_cluster/health
 
-### allocation
-GET _cluster/allocation/explain?pretty
+### allocation pretty
+_cluster/allocation/explain?pretty
 
 ### push
-POST _cluster/reroute?retry_failed=true
+_cluster/reroute?retry_failed=true

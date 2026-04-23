@@ -15,3 +15,6 @@ sudo docker logs <container_id> --tail 200
 
 ### list ports
 ss -tulpn
+
+### delete postgres logs
+sudo find /opt/edr/postgres/logs -name "*.log*" -type f -mtime +7 -delete
