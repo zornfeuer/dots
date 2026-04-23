@@ -9,3 +9,6 @@ _cluster/allocation/explain?pretty
 
 ### push
 _cluster/reroute?retry_failed=true
+
+### snapshot backup
+_snapshot/backup/_all

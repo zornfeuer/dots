@@ -17,11 +17,6 @@ status is-interactive; and begin
     alias nr 'bun run'
     alias nx 'bunx'
 
-    set -x XDG_DATA_HOME "$HOME/.local/share"
-    set -x XDG_CONFIG_HOME "$HOME/.config"
-    set -x XDG_CACHE_HOME "$HOME/.cache"
-    set -x XDG_STATE_HOME "$HOME/.local/state"
-
     function fish_prompt
         set -l last_status $status
         set -l stat

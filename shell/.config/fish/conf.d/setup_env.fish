@@ -1,4 +1,9 @@
 # GTK/Qt — same as ~/.config/environment.d/90-ui-theme.conf (fish-started GUIs)
+set -x XDG_DATA_HOME "$HOME/.local/share"
+set -x XDG_CONFIG_HOME "$HOME/.config"
+set -x XDG_CACHE_HOME "$HOME/.cache"
+set -x XDG_STATE_HOME "$HOME/.local/state"
+
 set -x GTK_THEME Gruvbox-Material-Dark-medium
 set -x GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc":"$XDG_CONFIG_HOME/gtk-2.0/gtkrc.mine"
 set -x QT_QPA_PLATFORMTHEME qt6ct
